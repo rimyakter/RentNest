@@ -5,7 +5,7 @@ import config from "./config";
 const app: Application = express();
 
 app.get("/", (req, res) => {
-  res.send("Server is Running!");
+  res.send("Server is Running Noman!");
 });
 
 app.get("/cars", async (req, res) => {
