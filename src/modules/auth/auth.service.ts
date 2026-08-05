@@ -65,6 +65,15 @@ export async function loginUser(input: LoginInput) {
     updatedAt: user.updatedAt,
   };
 
+  const tokens = createTokenPair({
+    id: user.id,
+    email: user.email,
+    role: user.role,
+  });
+
+  console.log("Generated Token:", tokens.accessToken);
+  console.log("Generated Length:", tokens.accessToken.length);
+
   return {
     user: safeUser,
     ...createTokenPair({ email: user.email, id: user.id, role: user.role }),

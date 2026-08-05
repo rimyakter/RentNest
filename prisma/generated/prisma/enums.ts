@@ -47,8 +47,8 @@ export type RentalRequestStatus = (typeof RentalRequestStatus)[keyof typeof Rent
 
 
 export const Role = {
-  RENTER: 'RENTER',
-  OWNER: 'OWNER',
+  TENANT: 'TENANT',
+  LANDLORD: 'LANDLORD',
   ADMIN: 'ADMIN'
 } as const
 

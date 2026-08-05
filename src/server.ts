@@ -1,9 +1,12 @@
 import app from "./app";
+import config from "./config";
 
-if (process.env.NODE_ENV !== "production") {
-  app.listen(3000, () => {
-    console.log("Server is running on http://localhost:3000");
+const port = Number(config.PORT ?? 3000);
+
+if (config.NODE_ENV !== "production") {
+  app.listen(port, () => {
+    console.log(`server is running on http://localhost:${port}`);
   });
-} else {
-  //code 2
 }
+
+export default app;

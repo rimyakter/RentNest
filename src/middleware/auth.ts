@@ -13,6 +13,8 @@ const auth = (...roles: Role[]) =>
     }
 
     const token = authHeader.slice(7);
+    console.log("Received Token:", token);
+console.log("Received Length:", token.length);
 
     try {
       const decoded = verifyAccessToken(token);
@@ -24,6 +26,7 @@ const auth = (...roles: Role[]) =>
       req.user = decoded;
       next();
     } catch (error) {
+      console.error(error);
       if (error instanceof AppError) throw error;
       throw new AppError(401, "Unauthorized - Invalid token");
     }

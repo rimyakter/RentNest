@@ -11,4 +11,5 @@ const config = {
   JWT_REFRESH_SECRET: env.JWT_REFRESH_SECRET!,
 };
 
+
 export default config;
