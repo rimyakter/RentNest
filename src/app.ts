@@ -1,16 +1,13 @@
 import express, { type Application } from "express";
-import prisma from "./lib/prisma";
-import config from "./config";
+import { notFound } from "./middleware/not-found";
+import { globalErrorHandler } from "./middleware/global-error";
 
 const app: Application = express();
 
 app.get("/", (req, res) => {
   res.send("Server is Running Noman!");
 });
-
-app.get("/cars", async (req, res) => {
-  const cars = await prisma.car.findMany();
-  res.json(cars);
-});
+app.use(notFound);
+app.use(globalErrorHandler);
 
 export default app;
