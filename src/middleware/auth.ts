@@ -13,8 +13,6 @@ const auth = (...roles: Role[]) =>
     }
 
     const token = authHeader.slice(7);
-    console.log("Received Token:", token);
-console.log("Received Length:", token.length);
 
     try {
       const decoded = verifyAccessToken(token);
