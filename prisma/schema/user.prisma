@@ -1,0 +1,24 @@
+enum Role {
+  RENTER
+  OWNER
+  ADMIN
+}
+
+model User {
+  id          String   @id @default(uuid())
+  name        String
+  email       String   @unique
+  phone       String?  @unique
+  password    String
+  profileImage String?
+  role        Role     @default(RENTER)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  properties  Property[]
+  requests    RentalRequest[]
+  payments    Payment[]
+  reviews     Review[]
+}
