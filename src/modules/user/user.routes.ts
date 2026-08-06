@@ -5,6 +5,6 @@ import auth from "../../middleware/auth";
 const userRouter = Router();
 
 userRouter.get("/me", auth(), getMe);
-userRouter.get("/", auth("LANDLORD"), getUsers);
+userRouter.get("/", auth("ADMIN"), getUsers);
 
 export default userRouter;
