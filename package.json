@@ -8,7 +8,8 @@
     "build": "prisma generate && tsup",
     "deploy": "vercel --prod",
     "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev"
+    "db:migrate": "prisma migrate dev",
+    "webhook:stripe": "stripe listen --forward-to localhost:5000/payments/webhook"
   },
   "keywords": [],
   "author": "",

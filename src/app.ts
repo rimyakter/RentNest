@@ -9,8 +9,14 @@ import paymentRouter from "./modules/payment/payment.route";
 import rentalRequestRouter from "./modules/rental-request/rental-request.route";
 import categoryRouter from "./modules/category/category.route";
 import propertyRouter from "./modules/property/property.route";
+import { webhook } from "./modules/payment/payment.controller";
 
 const app: Application = express();
+app.post(
+  "/payments/webhook",
+  express.raw({ type: "application/json" }),
+  webhook,
+);
 
 app.use(express.json());
 app.use(cookieParser());
