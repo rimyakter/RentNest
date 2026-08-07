@@ -16,7 +16,7 @@ categoryRouter.get("/:id", getCategory);
 
 // Admin
 categoryRouter.post("/", auth("ADMIN"), addCategory);
-categoryRouter.patch("/:id", auth("ADMIN"), editCategory);
+categoryRouter.put("/:id", auth("ADMIN"), editCategory);
 categoryRouter.delete("/:id", auth("ADMIN"), removeCategory);
 
 export default categoryRouter;

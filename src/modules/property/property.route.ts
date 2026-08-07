@@ -20,7 +20,7 @@ propertyRouter.get("/:id", getProperty);
  * Landlord Routes
  */
 propertyRouter.post("/", auth("LANDLORD", "ADMIN"), addProperty);
-propertyRouter.patch("/:id", auth("LANDLORD", "ADMIN"), editProperty);
+propertyRouter.put("/:id", auth("LANDLORD", "ADMIN"), editProperty);
 propertyRouter.delete("/:id", auth("LANDLORD", "ADMIN"), removeProperty);
 
 export default propertyRouter;
