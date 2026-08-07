@@ -358,10 +358,3 @@ Error
   "success": false,
   "message": "Error message"
 }
-```
-
----
-
-# 📄 License
-
-This project is licensed under the MIT License.
