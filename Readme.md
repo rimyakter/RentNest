@@ -147,13 +147,10 @@ Payment Status
 Payment Provider
 
 - STRIPE
-- SSLCOMMERZ
 
 Payment Method
 
 - CARD
-- MOBILE_BANKING
-- BANK_TRANSFER
 
 ---
 
@@ -283,7 +280,7 @@ JWT_ACCESS_EXPIRES_IN=7d
 STRIPE_SECRET_KEY=
 STRIPE_WEBHOOK_SECRET=
 
-CLIENT_URL=http://localhost:3000
+CLIENT_URL=http://localhost:5000
 ```
 
 ---
