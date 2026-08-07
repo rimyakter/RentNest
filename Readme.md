@@ -337,24 +337,6 @@ npm run webhook:stripe
 8. Tenant completes payment using Stripe.
 9. Tenant writes a review after renting.
 
----
 
-# 📌 API Response Format
 
-Success
 
-```json
-{
-  "success": true,
-  "message": "Success",
-  "data": {}
-}
-```
-
-Error
-
-```json
-{
-  "success": false,
-  "message": "Error message"
-}
